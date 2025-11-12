@@ -1,0 +1,20 @@
+﻿MDFusionLabHaute.DesktopSurface
+1.0.0.0
+
+winexe
+C#
+.cs
+D:\Development\PrismaProNew\MDFusionLabHaute.DesktopSurface\obj\Debug\net6.0-windows\
+MDFusionLabHaute.DesktopSurface
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+D:\Development\PrismaProNew\MDFusionLabHaute.DesktopSurface\App.xaml
+15595413108
+
+26-876423032
+2691045980678
+DarkTheme.xaml;Resources\SmoothScrollViewerStyle.xaml;Themes\Generic.xaml;Views\Container.xaml;Views\LockScreen.xaml;Views\Login.xaml;Views\MachineProfile.xaml;Views\Pages\CustomDispense.xaml;Views\Pages\Dashboard.xaml;Views\Pages\Dispense.xaml;Views\Pages\Login.xaml;Views\Pages\Scanner.xaml;Views\Pages\ScreenSaver.xaml;Views\Refill Bag Tracking.xaml;Views\UserControls\PopupWindow.xaml;
+
+False
+

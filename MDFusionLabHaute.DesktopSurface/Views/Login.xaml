@@ -1,0 +1,243 @@
+﻿<Window
+    x:Class="MDFusionLabHaute.DesktopSurface.Views.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:gif="http://wpfanimatedgif.codeplex.com"
+    xmlns:local="clr-namespace:MDFusionLabHaute.DesktopSurface.Views"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:wpfui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="Login"
+    d:DesignHeight="1824"
+    d:DesignWidth="2736"
+    Background="Black"
+    FontFamily="Neutraface Text Book"
+    FontSize="16"
+    Foreground="White"
+    Icon="/Views/Resources/Images/Group-2.png"
+    ResizeMode="NoResize"
+    Style="{DynamicResource UiWindow}"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Maximized"
+    mc:Ignorable="d">
+
+    <Grid x:Name="grdMain">
+
+        <Grid.Background>
+            <VisualBrush Stretch="UniformToFill">
+                <VisualBrush.Visual>
+                    <Image
+                        gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Untitled design.gif"
+                        gif:ImageBehavior.AutoStart="True"
+                        gif:ImageBehavior.RepeatBehavior="1"
+                        AutomationProperties.IsOffscreenBehavior="Default" />
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Grid.Background>
+
+        <!--  Default Images  -->
+        <Image
+            x:Name="imgSidebar"
+            Margin="10,10,0,10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Stretch"
+            gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Asset 5.png" />
+        <Image
+            x:Name="imgLogo"
+            Width="275"
+            Height="275"
+            Margin="693,15,15,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Asset 6.png" />
+
+        <Image
+            x:Name="imgCenter"
+            Width="450"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Asset 7.png" />
+
+        <!--  Email  -->
+        <Label
+            x:Name="lblEmail"
+            Margin="0,0,0,150"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="EMAIL ACCOUNT"
+            FontFamily="Neutraface Text Book"
+            FontSize="16" />
+        <TextBox
+            x:Name="txtEmailID"
+            Width="350"
+            Height="38"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            CharacterCasing="Upper"
+            FontFamily="Neutraface Text Book"
+            FontSize="16"
+            KeyUp="txtEmailID_KeyUp"
+            TextWrapping="Wrap" />
+
+        <!--  Password  -->
+        <Label
+            x:Name="lblPassword"
+            Margin="0,0,0,150"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="PASSWORD"
+            FontFamily="Neutraface Text Book"
+            FontSize="16" />
+        <PasswordBox
+            x:Name="txtPassword"
+            Width="350"
+            Height="38"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontFamily="Neutraface Text Book"
+            FontSize="16"
+            KeyUp="txtPassword_KeyUp" />
+
+        <!--  Footer  -->
+        <Grid
+            x:Name="grdFooter"
+            Width="500"
+            Height="70"
+            Margin="5,5,0,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Bottom">
+            <Image
+                x:Name="imgFooterActions"
+                Margin="5,5,5,10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Asset 4.png" />
+            <Button
+                x:Name="btnExit"
+                Height="60"
+                Margin="0,0,300,20"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Click="btnExit_Click"
+                FontSize="16"
+                Foreground="White"
+                Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        Margin="0,0,5,0"
+                        VerticalAlignment="Center"
+                        FontFamily="Neutraface Text Book"
+                        FontSize="30"
+                        Foreground="#FFFFFF"
+                        Text="EXIT" />
+                    <!--<Image
+                        Width="40"
+                        Height="40"
+                        Source="/Views/Resources/Images/Glob-InActive.png" />-->
+                </StackPanel>
+            </Button>
+            <Button
+                x:Name="btnNext"
+                Height="60"
+                Margin="300,0,0,20"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Click="btnNext_Click"
+                FontSize="16"
+                Foreground="White"
+                Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        Margin="0,0,5,0"
+                        VerticalAlignment="Center"
+                        FontFamily="Neutraface Text Book"
+                        FontSize="30"
+                        Foreground="#FFFFFF"
+                        Text="NEXT" />
+                    <!--<Image
+                        Width="40"
+                        Height="40"
+                        Source="/Views/Resources/Images/Glob-InActive.png" />-->
+                </StackPanel>
+            </Button>
+            <Button
+                x:Name="btnBack"
+                Height="60"
+                Margin="0,0,300,20"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Click="btnBack_Click"
+                FontSize="16"
+                Foreground="White"
+                Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        Margin="0,0,5,0"
+                        VerticalAlignment="Center"
+                        FontFamily="Neutraface Text Book"
+                        FontSize="30"
+                        Foreground="#FFFFFF"
+                        Text="BACK" />
+                    <Image
+                        Width="40"
+                        Height="40"
+                        Source="/Views/Resources/Images/Glob-InActive.png" />
+                </StackPanel>
+            </Button>
+            <Button
+                x:Name="btnSubmit"
+                Height="60"
+                Margin="300,0,0,20"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Click="btnSubmit_Click"
+                FontSize="16"
+                Foreground="White"
+                Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        Margin="0,0,5,0"
+                        VerticalAlignment="Center"
+                        FontFamily="Neutraface Text Book"
+                        FontSize="30"
+                        Foreground="#FFFFFF"
+                        Text="SUBMIT" />
+                    <Image
+                        Width="40"
+                        Height="40"
+                        Source="/Views/Resources/Images/Glob-InActive.png" />
+                </StackPanel>
+            </Button>
+        </Grid>
+
+        <!--  Notification Bar  -->
+        <wpfui:Snackbar
+            x:Name="MySnackbar"
+            MinWidth="500"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            FontFamily="Neutraface Text Bold"
+            FontSize="16" />
+
+        <!--  Loader  -->
+        <DockPanel
+            Name="Loader"
+            Panel.ZIndex="98"
+            Visibility="Hidden">
+            <wpfui:ProgressRing
+                x:Name="loading"
+                Width="50"
+                Height="50"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Panel.ZIndex="99"
+                Foreground="White"
+                IsIndeterminate="True"
+                Progress="80" />
+            <DockPanel.Background>
+                <SolidColorBrush Opacity="0.5" Color="#FFF3ECEC" />
+            </DockPanel.Background>
+        </DockPanel>
+    </Grid>
+</Window>

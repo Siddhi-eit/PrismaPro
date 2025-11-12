@@ -1,0 +1,100 @@
+﻿<Window x:Class="MDFusionLabHaute.DesktopSurface.Views.Refill_Bag_Tracking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MDFusionLabHaute.DesktopSurface.Views"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com" 
+        xmlns:materialDesign="http://schemas.lepo.co/wpfui/2022/xaml" 
+        xmlns:wpfui="clr-namespace:WpfUIPickerLib;assembly=WpfUIPickerLib"
+        mc:Ignorable="d"
+        Title="Refill_Bag_Tracking" 
+        Height="450" 
+        Width="800" 
+        Icon="/Views/Resources/Images/Group-2.png" 
+        
+        WindowState="Maximized" WindowStartupLocation="CenterScreen">
+
+    <Grid x:Name="pnlMain">
+
+        <!-- Default Images -->
+        <Image x:Name="imgSidebar" Visibility="Visible" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Stretch" gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Left-Banner-Black.png"/>
+        <Image x:Name="imgLogo" Visibility="Visible" HorizontalAlignment="Right" Margin="693,15,15,0" VerticalAlignment="Top" gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Logo-Black.png" Width="200" Height="96"/>
+
+        <Image x:Name="imgCenter" Visibility="Hidden" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Center-Bar-Combine.png" Height="300" Width="600" Margin="0,0,0,0"/>
+        <Image x:Name="imgCenterSpaces" Visibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Canter-bar-center-space.png" Width="600" Margin="0,0,0,0"/>
+
+        <!-- Controls -->
+        <Label Content="REFILL BAG TRACKING" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" FontWeight="Bold" Margin="0,0,0,230" FontSize="36"/>
+        <Label x:Name="lblTitle" Content="ENTER USER ID" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" Margin="0,0,0,150" FontSize="35"/>
+
+        <!--Step 0-->
+        <PasswordBox x:Name="txtUserName" Visibility="Hidden" Password="*****" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" FontFamily="Neutraface Text Book" FontSize="36" Foreground="#FF818282" Margin="0,23,0,0" Background="{x:Null}" MaxWidth="0" MinHeight="4" FontWeight="Bold" MinWidth="450" />
+
+        <!--Step 1-->
+        <TextBox x:Name="txtMdFusionLabNo" Visibility="Hidden" Text="*****" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" FontFamily="Neutraface Text Book" FontSize="35" Foreground="#FF818282" Margin="0,23,0,0" Background="#FFD5D5D6" MaxWidth="0" MinHeight="0" MinWidth="200" FontWeight="Bold" />
+
+        <!--Step 2-->
+        <StackPanel x:Name="spnlCanisterNo" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" >
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/Views/Resources/Images/spinner-background.png" Stretch="Uniform"/>
+            </StackPanel.Background>
+            <!--<wpfui:WpfUIPickerControl x:Name="spinCanisterNo" FontWeight="Bold"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="28,0,0,0" FontSize="35" AlwaysOpen="True"  />-->
+        </StackPanel>
+
+        <!--Step 3-->
+        <StackPanel x:Name="spnlSanitizingReminder" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" >
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/Views/Resources/Images/spinner-background.png" Stretch="Uniform"/>
+            </StackPanel.Background>
+            <!--<wpfui:WpfUIPickerControl x:Name="spinSanitizingReminde" FontWeight="Bold"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="28,0,0,0" FontSize="35" AlwaysOpen="True"  />-->
+        </StackPanel>
+        <Label x:Name="lblSanitizingReminder" Visibility="Hidden" Content="MTS" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF818282" Margin="250,15,0,0" FontSize="35"  ></Label>
+
+        <!--Step 4-->
+        <StackPanel x:Name="spnlProduct" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" >
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/Views/Resources/Images/spinner-background.png" Stretch="Uniform"/>
+            </StackPanel.Background>
+            <!--<wpfui:WpfUIPickerControl x:Name="spinProduct" FontWeight="Bold"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="28,0,0,0" FontSize="35" AlwaysOpen="True"  />-->
+        </StackPanel>
+
+        <!--Step 5-->
+        <Button VerticalAlignment="Center" Visibility="Hidden" HorizontalAlignment="Center" x:Name="btnQR" Content="OR" MinHeight="100" MinWidth="100" FontWeight="Bold" Margin="0,15,0,0" FontSize="22"  >
+            <Button.Background>
+                <ImageBrush ImageSource="/Views/Resources/Images/Text-Background.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+
+        <!--Step 6-->
+        <Button VerticalAlignment="Center" Visibility="Hidden" HorizontalAlignment="Center" x:Name="btnPrint" Content="PRINT" MinHeight="100" MinWidth="100" FontWeight="Bold" Margin="0,15,0,0" FontSize="22"  >
+            <Button.Background>
+                <ImageBrush ImageSource="/Views/Resources/Images/Text-Background.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button> 
+
+        <!-- Footer -->
+        <Grid x:Name="grdFooter" HorizontalAlignment="Stretch" Height="70" Margin="5,5,0,10" VerticalAlignment="Bottom" Width="500">
+            <Image x:Name="imgFooterActions" Margin="5,5,5,5" VerticalAlignment="Center" HorizontalAlignment="Center" gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Asset 4.png"/>
+            <Button x:Name="btnExit" Visibility="Hidden" Content="EXIT" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,10,250,0" BorderBrush="{x:Null}" Click="btnExit_Click" Background="{x:Null}" FontSize="16"/>
+            <Button x:Name="btnNext" Content="FORWARD" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="250,10,0,0" BorderBrush="{x:Null}" Background="{x:Null}" Click="btnNext_Click" FontSize="16"/>
+            <Button x:Name="btnBack" Content="BACK" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,250,0" BorderBrush="{x:Null}" Click="btnBack_Click" Background="{x:Null}" FontSize="16"/>
+            <Button x:Name="btnSubmit" Visibility="Hidden" Content="SUBMIT" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="250,10,0,0" BorderBrush="{x:Null}" Background="{x:Null}" Click="btnSubmit_Click" FontSize="16"/>
+        </Grid>
+
+        <!-- Notification Bar -->
+        <materialDesign:Snackbar x:Name="MySnackbar" HorizontalAlignment="Right" VerticalAlignment="Top" MinWidth="500" FontFamily="Neutraface Text Bold" FontSize="16"  />
+
+        <!-- Loader -->
+        <DockPanel Name="Loader" Visibility="Hidden" Panel.ZIndex="98" >
+            <!--<materialDesign:ProgressRing x:Name="loading" IsIndeterminate="True" Progress="80" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" Foreground="White" Panel.ZIndex="99" />-->
+            <Image Source="/Views/Resources/Images/Loader.png" Width="100" Height="100"  >
+            </Image>
+            <DockPanel.Background>
+                <SolidColorBrush Color="#FFF3ECEC" Opacity="0.5"/>
+            </DockPanel.Background>
+        </DockPanel>
+
+
+    </Grid>
+</Window>

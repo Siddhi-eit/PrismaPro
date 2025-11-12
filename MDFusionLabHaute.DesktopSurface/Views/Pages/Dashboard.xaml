@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="MDFusionLabHaute.DesktopSurface.Views.Pages.Dashboard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MDFusionLabHaute.DesktopSurface.Views.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:wpfui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:gif="http://wpfanimatedgif.codeplex.com"
+    Title="Dashboard"
+    d:DesignHeight="1824" d:DesignWidth="2736"
+    mc:Ignorable="d" Foreground="White" Background="Black">
+
+    <Grid>
+        <Grid.Background>
+            <VisualBrush  Stretch="None" >
+                <VisualBrush.Visual>
+                    <Image gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Background-new (2)-old.gif"
+                   gif:ImageBehavior.AutoStart="True" 
+                   gif:ImageBehavior.RepeatBehavior="1" AutomationProperties.IsOffscreenBehavior="Default"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Grid.Background>
+
+        <!-- Default Images -->
+        <Image x:Name="imgCenter" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Asset 7.png" Height="300" Width="600"/>
+        <Image x:Name="imgSidebar" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Stretch" gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Asset 5.png"/>
+        <Image x:Name="imgLogo" HorizontalAlignment="Right" Margin="693,15,15,0" VerticalAlignment="Top" gif:ImageBehavior.AnimatedSource="/Views/Resources/Images/Asset 6.png" Width="275" Height="275"/>
+
+        <wpfui:CardAction x:Name="CardActionDispense"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"   
+            Content="DISPENSE"
+            Uid="CardActionDispense"
+            Icon="ColorBackground24" Margin="12,10,160,0" Width="150" Click="CardActionDispense_Click" FontFamily="Neutraface Text Book" />
+        <wpfui:CardAction x:Name="CardActionScanner"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="SCANNER"
+            Uid="CardActionScanner"
+            Icon="BarcodeScanner24" Margin="160,10,0,0" Width="150" Click="CardActionScanner_Click" FontFamily="Neutraface Text Book" />
+    </Grid>
+</Page>

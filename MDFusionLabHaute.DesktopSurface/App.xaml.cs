@@ -1,0 +1,15 @@
+﻿using System.Windows;
+
+namespace MDFusionLabHaute.DesktopSurface
+{
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
+    public partial class App : Application
+    {
+        public App()
+        {
+           
+        }
+    }
+}

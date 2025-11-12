@@ -1,0 +1,221 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>10.0</LangVersion>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Resources\Asset 4.png" />
+    <None Remove="Views\Resources\Asset 5.png" />
+    <None Remove="Views\Resources\Asset 6.png" />
+    <None Remove="Views\Resources\Asset 7.png" />
+    <None Remove="Views\Resources\Asset 8.png" />
+    <None Remove="Views\Resources\Asset 9.png" />
+    <None Remove="Views\Resources\Background.gif" />
+    <None Remove="Views\Resources\dll\PrismaPro.tlb" />
+    <None Remove="Views\Resources\Fonts\NeutraCond-Medium.otf" />
+    <None Remove="Views\Resources\Fonts\NeutraDisplay-Bold.otf" />
+    <None Remove="Views\Resources\Fonts\NeutraDisplay-Medium.otf" />
+    <None Remove="Views\Resources\Fonts\NeutraText-Bold.otf" />
+    <None Remove="Views\Resources\Fonts\NeutraText-Book.otf" />
+    <None Remove="Views\Resources\Images\Background-new %281%29.gif" />
+    <None Remove="Views\Resources\Images\Background-new %282%29-old.gif" />
+    <None Remove="Views\Resources\Images\Background-new %282%29.gif" />
+    <None Remove="Views\Resources\Images\Background-new.gif" />
+    <None Remove="Views\Resources\Images\Background_600x600.gif" />
+    <None Remove="Views\Resources\Images\Blank-Button.png" />
+    <None Remove="Views\Resources\Images\Canter-bar-bottom.png" />
+    <None Remove="Views\Resources\Images\Canter-bar-center-space.png" />
+    <None Remove="Views\Resources\Images\Canter-bar-left.png" />
+    <None Remove="Views\Resources\Images\Canter-bar-right.png" />
+    <None Remove="Views\Resources\Images\Canter-bar-upper.png" />
+    <None Remove="Views\Resources\Images\Center-Bar-Combine.png" />
+    <None Remove="Views\Resources\Images\Dispense.png" />
+	<None Remove="Views\Resources\Images\Dispensar.png" />
+	  <None Remove="Views\Resources\Images\Reiniciar.png" />
+	  <None Remove="Views\Resources\Images\Pausanew.png" />
+    <None Remove="Views\Resources\Images\ENG.png" />
+    <None Remove="Views\Resources\Images\Esp.png" />
+    <None Remove="Views\Resources\Images\Essence1.png" />
+    <None Remove="Views\Resources\Images\Essence2.png" />
+    <None Remove="Views\Resources\Images\Essence3.png" />
+    <None Remove="Views\Resources\Images\Essence4.png" />
+    <None Remove="Views\Resources\Images\Frame 15.png" />
+    <None Remove="Views\Resources\Images\Glob-Active.png" />
+    <None Remove="Views\Resources\Images\Glob-InActive.png" />
+    <None Remove="Views\Resources\Images\Group-2.png" />
+    <None Remove="Views\Resources\Images\Left-Banner-Black.png" />
+    <None Remove="Views\Resources\Images\Loader.png" />
+    <None Remove="Views\Resources\Images\Logo-Black.png" />
+    <None Remove="Views\Resources\Images\Menu-Selected.png" />
+    <None Remove="Views\Resources\Images\Menu.png" />
+    <None Remove="Views\Resources\Images\Menu_new.png" />
+    <None Remove="Views\Resources\Images\next-play.png" />
+    <None Remove="Views\Resources\Images\Pause.png" />
+    <None Remove="Views\Resources\Images\Print.png" />
+    <None Remove="Views\Resources\Images\Resume.png" />
+    <None Remove="Views\Resources\Images\SPHERE.gif" />
+    <None Remove="Views\Resources\Images\spinner-background.png" />
+    <None Remove="Views\Resources\Images\Text-Background.png" />
+    <None Remove="Views\Resources\Images\Untitled design.gif" />
+    <None Remove="Views\Resources\PDF\Dina5 MD Fusion_UX.pdf" />
+    <None Remove="Views\Resources\PDF\PROSPECT HN01.pdf" />
+    <None Remove="Views\Resources\White Background.gif" />
+    <None Remove="WPFUI_TaskNav.vstemplate" />
+    <None Remove="__PreviewImage.png" />
+    <None Remove="__TemplateIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
+    <PackageReference Include="Analytics" Version="3.8.1" />
+    <PackageReference Include="Caliburn.Micro.Core" Version="4.0.212" />
+    <PackageReference Include="itext7" Version="8.0.5" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Services.Client" Version="16.170.0" />
+    <PackageReference Include="Nancy" Version="2.0.0" />
+    <PackageReference Include="Spire.PDF" Version="9.6.0" />
+    <PackageReference Include="WPF-UI" Version="1.2.7" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+    <PackageReference Include="WPFLocalizeExtension" Version="3.9.4" />
+    <PackageReference Include="ZXing.Net" Version="0.16.8" />
+    <PackageReference Include="ZXing.Net.Bindings.Windows.Compatibility" Version="0.16.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Prisma.Domain\MDFusionLabHaute.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Interop.Dispenser">
+      <HintPath>Views\Resources\dll\Interop.Dispenser.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <!--<Reference Include="VirtualKeyboard.Wpf">
+      <HintPath>..\VirtualKeyboard.Wpf-master\VirtualKeyboard.Wpf\bin\Debug\VirtualKeyboard.Wpf.dll</HintPath>
+    </Reference>-->
+    <Reference Include="WpfUIPickerLib">
+      <HintPath>..\..\..\..\Users\EIDEV44\Downloads\WpfUIPickerLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\Resources\dll\PrismaPro.tlb" />
+    <Resource Include="Views\Resources\Fonts\NeutraCond-Medium.otf" />
+    <Resource Include="Views\Resources\Fonts\NeutraDisplay-Bold.otf" />
+    <Resource Include="Views\Resources\Fonts\NeutraDisplay-Medium.otf" />
+    <Resource Include="Views\Resources\Fonts\NeutraText-Bold.otf" />
+    <Resource Include="Views\Resources\Fonts\NeutraText-Book.otf" />
+    <Resource Include="Views\Resources\Images\Asset 4.png" />
+    <Resource Include="Views\Resources\Images\Asset 5.png" />
+    <Resource Include="Views\Resources\Images\Asset 6.png" />
+    <Resource Include="Views\Resources\Images\Asset 7.png" />
+    <Resource Include="Views\Resources\Images\Asset 8.png" />
+    <Resource Include="Views\Resources\Images\Asset 9.png" />
+    <Resource Include="Views\Resources\Images\Background-new (1).gif" />
+    <Resource Include="Views\Resources\Images\Background-new (2)-old.gif" />
+    <Resource Include="Views\Resources\Images\Background-new (2).gif" />
+    <Resource Include="Views\Resources\Images\Background-new.gif" />
+    <Resource Include="Views\Resources\Images\Background.gif" />
+    <Resource Include="Views\Resources\Images\Background_600x600.gif" />
+    <Resource Include="Views\Resources\Images\Blank-Button.png" />
+    <Resource Include="Views\Resources\Images\Canter-bar-bottom.png" />
+    <Resource Include="Views\Resources\Images\Canter-bar-center-space.png" />
+    <Resource Include="Views\Resources\Images\Canter-bar-left.png" />
+    <Resource Include="Views\Resources\Images\Canter-bar-right.png" />
+    <Resource Include="Views\Resources\Images\Canter-bar-upper.png" />
+    <Resource Include="Views\Resources\Images\Center-Bar-Combine.png" />
+    <Resource Include="Views\Resources\Images\Dispense.png" />
+	<Resource Include="Views\Resources\Images\Dispensar.png" />
+	  <Resource Include="Views\Resources\Images\Reiniciar.png" />
+	  <Resource Include="Views\Resources\Images\Pausanew.png" />
+    <Resource Include="Views\Resources\Images\ENG.png" />
+    <Resource Include="Views\Resources\Images\Esp.png" />
+    <Resource Include="Views\Resources\Images\Essence1.png" />
+    <Resource Include="Views\Resources\Images\Essence2.png" />
+    <Resource Include="Views\Resources\Images\Essence3.png" />
+    <Resource Include="Views\Resources\Images\Essence4.png" />
+    <Resource Include="Views\Resources\Images\Frame 15.png" />
+    <Resource Include="Views\Resources\Images\Glob-Active.png" />
+    <Resource Include="Views\Resources\Images\Glob-InActive.png" />
+    <Resource Include="Views\Resources\Images\Group-2.png" />
+    <Resource Include="Views\Resources\Images\Left-Banner-Black.png" />
+    <Resource Include="Views\Resources\Images\Loader.png" />
+    <Resource Include="Views\Resources\Images\Logo-Black.png" />
+    <Resource Include="Views\Resources\Images\Menu-Selected.png" />
+    <Resource Include="Views\Resources\Images\Menu.png" />
+    <Resource Include="Views\Resources\Images\Menu_new.png" />
+    <Resource Include="Views\Resources\Images\next-play.png" />
+    <Resource Include="Views\Resources\Images\Pause.png" />
+    <Resource Include="Views\Resources\Images\Print.png" />
+    <Resource Include="Views\Resources\Images\Resume.png" />
+    <Resource Include="Views\Resources\Images\SPHERE.gif" />
+    <Resource Include="Views\Resources\Images\spinner-background.png" />
+    <Resource Include="Views\Resources\Images\Text-Background.png" />
+    <Resource Include="Views\Resources\Images\Untitled design.gif" />
+    <Resource Include="Views\Resources\Images\White Background.gif" />
+    <Resource Include="Views\Resources\PDF\Dina5 MD Fusion_UX.pdf" />
+    <Resource Include="Views\Resources\PDF\PROSPECT HN01.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ESPLanguageResource.Designer.cs">
+      <DependentUpon>ESPLanguageResource.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="ENGLanguageResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ENGLanguageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="LanguageResources\ENGLanguageResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ENGLanguageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="LanguageResources\ESPLanguageResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ESPLanguageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MachineProfile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ESPLanguageResource.resx">
+      <LastGenOutput>ESPLanguageResource.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ENGLanguageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ENGLanguageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LanguageResources\ENGLanguageResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ENGLanguageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LanguageResources\ESPLanguageResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ESPLanguageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Resources\Temp\" />
+  </ItemGroup>
+
+</Project>
