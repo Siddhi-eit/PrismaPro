@@ -1,0 +1,8 @@
+GENERATE_SOURCEMAP = false;
+REACT_APP_Haute_API_URL= http://api.hautecustombeauty.com/api
+REACT_APP_Haute_IMAGE_URL= http://api.hautecustombeauty.com/
+Haute_SignalR_URL= http://api.hautecustombeauty.com/ConnectionHub
+
+// REACT_APP_Haute_API_URL= https://localhost:7216/api
+// REACT_APP_Haute_IMAGE_URL= https://localhost:7216
+// Haute_SignalR_URL= https://localhost:7216/ConnectionHub
